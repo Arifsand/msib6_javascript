@@ -10,11 +10,11 @@
             width: 80%;
         }
     </style>
-    <script src=""></script>
+    <!-- <script src="script.js"></script> -->
 </head>
 
 <body>
-    <form action="">
+    <form action="" id="myForm">
         <table style="
                     width: 50%;
                     border: 1px solid black;
@@ -32,36 +32,47 @@
                         <label for="">Nama Lengkap</label>
                     </td>
                     <td>
-                        <input type="text" name="" id="" placeholder="Masukkan Nama Anda" />
+                        <input type="text" name="nama" id="nama" placeholder="Masukkan Nama Anda" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="">Pekerjaan</label>
+                        <label for="pekerjaan">Pekerjaan</label>
                     </td>
                     <td>
-                        <input type="text" name="" id="" placeholder="Masukkan Pekerjaan" />
+                        <input type="text" name="pekerjaan" id="pekerjaan" placeholder="Masukkan Pekerjaan" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="">Hobby</label>
+                        <label for="hobby">Hobby</label>
                     </td>
                     <td>
-                        <input type="text" name="" id="" placeholder="Masukkan Hobby" />
+                        <input type="text" name="hobby" id="hobby" placeholder="Masukkan Hobby" />
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        <button type="button">Submit</button>
+                        <button type="button" onclick="tampilkanHasil()">Submit</button>
                     </th>
                 </tr>
             </tbody>
         </table>
     </form>
-    <center id="hasil">
+    <center id="hasil"> </center>
+    <script>
+        function tampilkanHasil() {
+            var nama = document.getElementById('nama').value;
+            var pekerjaan = document.getElementById('pekerjaan').value;
+            var hobby = document.getElementById('hobby').value;
 
-    </center>
+            var hasilDiv = document.getElementById('hasil');
+            hasilDiv.innerHTML = "<h2>Hasil Input:</h2>" +
+                "<p>Nama: " + nama + "</p>" +
+                "<p>Pekerjaan: " + pekerjaan + "</p>" +
+                "<p>Hobby: " + hobby + "</p>";
+        }
+    </script>
 </body>
 
 </html>
