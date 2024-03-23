@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+
+<body>
+    <div id="div1">
+        Hewan Bebek
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function () {
+            $("#div1").mouseover(function () {
+                $(this).css({
+                    background: "url('https://2.bp.blogspot.com/-HMuKcuVZ0h8/UAF8GEtZwpI/AAAAAAAAADY/I3xhoqN349w/s1600/bebek.jpg')"
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
